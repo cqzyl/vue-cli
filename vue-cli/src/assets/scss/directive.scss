@@ -1,0 +1,62 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  color: $materialColor;
+}
+
+// 隐藏站长统计
+#cnzz_stat_icon_1261186051 {
+  display: none;
+}
+
+// 图片懒加载
+img[lazy=loaded] {
+  opacity: 0;
+  animation: aFadeIn 1s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes aFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+img[data-imglazy="animate"] {
+  opacity: 0;
+  animation: aFadeIn 1s linear;
+  animation-fill-mode: both;
+}
+
+/* 页面跳转动画 */
+.page1-left-enter-active,
+.page1-left-leave-active,
+.page1-right-enter-active,
+.page1-right-leave-active {
+  transition: all 0.3s linear;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #f4f4f4;
+}
+
+.page1-right-leave-active,
+.page1-left-enter-active {
+  z-index: 0;
+}
+
+.page1-left-leave-active,
+.page1-right-enter-active {
+  z-index: 99999;
+}
+
+/* 跳转下一页 */
+.page1-left-leave,
+/* 返回上一页 */
+.page1-right-enter {
+  transform: translateX(-100%);
+}

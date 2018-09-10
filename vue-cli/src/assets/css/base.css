@@ -1,0 +1,153 @@
+/* reset */
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+html {
+  font-size: 16px;
+  border: 0 none;
+}
+html,
+body,
+button,
+dd,
+dl,
+dt,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+input,
+li,
+ol,
+p,
+textarea,
+td,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+i,
+b,
+em,
+var,
+strong {
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  border: 0 none;
+  vertical-align: top;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-size: 100%;
+}
+
+sub,
+sup {
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+  font-size: 75%;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  /*-webkit-appearance: button;*/
+  cursor: pointer;
+  /*-moz-appearance: button;*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea,
+button {
+  font-size: 100%;
+  outline: none;
+  vertical-align: top;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  border-style: none;
+  outline-style: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+:-moz-placeholder {
+  color: #ccc;
+}
+
+::-moz-placeholder {
+  color: #ccc;
+}
+
+:-ms-input-placeholder {
+  color: #ccc;
+}

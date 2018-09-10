@@ -1,0 +1,183 @@
+// 滚动体
+.wbovertouch {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// 按钮
+@mixin btns {
+  border-radius: $btnRadius;
+  background-color: $mainColor;
+  color: $fontWhiteColor;
+  &:active {
+    filter: brightness(.9);
+  }
+}
+.btn-1 {
+  width: 100%;
+  font-size: 4.2vw;
+  line-height: 2.5;
+  @include btns;
+}
+.btn-2 {
+  width: 18vw;
+  font-size: 3.6vw;
+  line-height: 2;
+  @include btns;
+}
+.btn-3 {
+  width: 100%;
+  font-size: 3.8vw;
+  line-height: 2;
+  @include btns;
+}
+
+// list-type
+.ul-rhombus {
+  $ic: 1em;
+  li {
+    padding-left: $ic + 0.5;
+    text-indent: -$ic - 0.5;
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5em;
+      width: $ic;
+      height: $ic;
+      background: url('data:image/svg+xml;charset=utf-8,<svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><g> <rect stroke="#000" transform="rotate(44.6804313659668 4.999999999999999,5.000000000000001)" height="6" width="6" y="2" x="2" stroke-width="0" fill="'+ $mainColor +'"/></g></svg>') no-repeat 50% 50% / 100% 100%;
+    }  
+  }
+}
+
+// 弹窗
+dialog {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  &:not([open]) {
+    display: block;
+  }
+  .dialog-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: toshowdialog 0.1s ease 0s 1 normal;
+    animation-fill-mode: both;
+  }
+  .close-r {
+    width: 1.8em;
+    height: 1.8em;
+    background: url(#{$oss}/common/bg/alert/close.png) no-repeat 0 0 / 100% 100%;
+  }
+  .close-rt {
+    right: 3vw;
+    top: 3vw;
+  }
+}
+
+@keyframes toshowdialog {
+  0% {transform: translate(-50%, -50%) scale(0.3);}
+  100% {transform: translate(-50%, -50%) scale(1);}
+}
+
+/* border-1px */
+
+@mixin border-1px {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    transform: scale(0.5);
+    background-color: black;
+  }
+}
+
+.bdr-l {
+  @include border-1px;
+  &::after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 200%;
+    width: 1px;
+    transform-origin: left top;
+  }
+}
+
+.bdr-r {
+  @include border-1px;
+  &::after {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 200%;
+    width: 1px;
+    transform-origin: right top;
+  }
+}
+
+.bdr-t {
+  @include border-1px;
+  &::after {
+    top: 0;
+    height: 1px;
+    width: 200%;
+    transform-origin: top;
+  }
+}
+
+.bdr-b {
+  @include border-1px;
+  &::after {
+    bottom: 0;
+    height: 1px;
+    width: 200%;
+    transform-origin: bottom;
+  }
+}
+
+// 图片灰色
+.grayimg {
+  filter: grayscale(100%);
+  filter: gray;
+  opacity: 0.75;
+  &.active {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+    filter: none;
+    opacity: 1;
+  }
+}
+
+// 右箭头
+.nextpage-right {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    width: 3vw;
+    height: 3vw;
+    position: absolute;
+    margin: (-1.5vw) 0 0;
+    right: 1.5vw;
+    top: 50%;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    transform: rotate(45deg);
+  }
+}
