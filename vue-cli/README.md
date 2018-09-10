@@ -1,6 +1,6 @@
-# snatch 积分夺宝项目
+# vue-cli
 
-> bx_activity
+> cq_activity
 
 ## Build Setup
 
