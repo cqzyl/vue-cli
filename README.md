@@ -1,2 +1,2 @@
-# untils
+# custom settings of vue-cli
 Something
