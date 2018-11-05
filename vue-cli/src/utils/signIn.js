@@ -16,9 +16,9 @@ function reLink() {
 
 function weixin() {
   window.location.href =
-    `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9abbb2bf93e4f1d7&redirect_uri=${
+    `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${
       encodeURIComponent(theUrl)
-    }&response_type=code&scope=snsapi_base&state=123&component_appid=wx66f06e74c0ae1a1f#wechat_redirect`;
+    }&response_type=code&scope=snsapi_base&state=${state}&component_appid=${component_appid}#wechat_redirect`;
 }
 
 function GetQueryString(name) {
