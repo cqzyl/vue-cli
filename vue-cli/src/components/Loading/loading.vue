@@ -6,7 +6,7 @@
           <img src="https://yxclub.oss-cn-hangzhou.aliyuncs.com/bxnew/pphd/loading.png">
       </div>
     </div>
-    <p class="bx-p">欢迎来到本香世界</p>
+    <p class="bx-p">欢迎来到我的app</p>
     <p>loading</p>
   </div>
 </template>
