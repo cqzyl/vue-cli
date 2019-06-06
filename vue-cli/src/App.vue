@@ -79,7 +79,7 @@ export default {
 
     // 页面title
     titleChange(title) {
-      document.title = title || '本香世界';
+      document.title = title || '我的项目';
     },
   },
   mounted() {
